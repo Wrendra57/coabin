@@ -38,7 +38,7 @@ app.use(ChatRoute);
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
   },
 });
 
@@ -155,4 +155,4 @@ server.listen(PORT, () =>
   console.log(`Example app listening on port http://localhost:${PORT}`)
 );
 
-module.exports = server
+module.exports = server;
